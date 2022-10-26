@@ -1,0 +1,46 @@
+{
+	"name": "ADOPMDB_SCProjects",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADOPMDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "organization",
+				"type": "nvarchar"
+			},
+			{
+				"name": "key",
+				"type": "nvarchar"
+			},
+			{
+				"name": "name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "qualifier",
+				"type": "nvarchar"
+			},
+			{
+				"name": "visibility",
+				"type": "nvarchar"
+			},
+			{
+				"name": "lastAnalysisDate",
+				"type": "nvarchar"
+			},
+			{
+				"name": "revision",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "SCProjects"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

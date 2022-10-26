@@ -1,0 +1,24 @@
+{
+	"name": "SCAPI_GetPullRequestByProjectKey",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SCAPI_GetPullRequestByProjectKey",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"projectkey": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "@concat('https://sonarcloud.io/api/project_pull_requests/list?project=',dataset().projectkey)",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

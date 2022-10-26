@@ -1,0 +1,65 @@
+{
+	"name": "ADOPMDB_PullRequests",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADOPMDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "key",
+				"type": "nvarchar"
+			},
+			{
+				"name": "title",
+				"type": "nvarchar"
+			},
+			{
+				"name": "branch",
+				"type": "nvarchar"
+			},
+			{
+				"name": "base",
+				"type": "nvarchar"
+			},
+			{
+				"name": "qualityGateStatus",
+				"type": "nvarchar"
+			},
+			{
+				"name": "bugs",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "vulnerabilities",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "codeSmells",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "analysisDate",
+				"type": "nvarchar"
+			},
+			{
+				"name": "target",
+				"type": "nvarchar"
+			},
+			{
+				"name": "sha",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "PullRequests"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
